@@ -21,7 +21,6 @@ process.options = cms.untracked.PSet( wantSummary = cms.untracked.bool(True) )
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(20000000) )
 
 # set the number of events to be skipped (if any) at end of file below
-
 # define JSON file
 goodJSON = '/home/cms-opendata/CMSSW_4_2_8/src/Validation/TrackVertex/datasets/Cert_136033-149442_7TeV_Apr21ReReco_Collisions10_JSON_v2.txt'
 
@@ -56,7 +55,7 @@ process.source.lumisToProcess.extend(myLumis)
 process.source.skipEvents = cms.untracked.uint32(0)
 
 
-process.demo = cms.EDAnalyzer('TrackVertex')
+process.demo = cms.EDAnalyzer('TrackVertex_2010')
 # ***********************************************************
 # output file name                                          *
 # change this according to input file, or according to wish *
