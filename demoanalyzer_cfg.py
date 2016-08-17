@@ -22,7 +22,7 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(20000000) )
 
 # set the number of events to be skipped (if any) at end of file below
 # define JSON file
-goodJSON = '/home/cms-opendata/CMSSW_4_2_8/src/Validation/TrackVertex/datasets/Cert_136033-149442_7TeV_Apr21ReReco_Collisions10_JSON_v2.txt'
+goodJSON = '/home/cms-opendata/CMSSW_4_2_8/src/Validation/TrackVertex_2010/datasets/Cert_136033-149442_7TeV_Apr21ReReco_Collisions10_JSON_v2.txt'
 
 myLumis = LumiList.LumiList(filename = goodJSON).getCMSSWString().split(',')
 
@@ -41,7 +41,7 @@ import FWCore.Utilities.FileUtils as FileUtils
 # ****************************************************************
 #
 # *** MinimumBias data set ***
-files2010data = FileUtils.loadListFromFile ('/home/cms-opendata/CMSSW_4_2_8/src/Validation/TrackVertex/datasets/CMS_Run2010B_MinimumBias_AOD_Apr21ReReco-v1_0000_file_index.txt')
+files2010data = FileUtils.loadListFromFile ('/home/cms-opendata/CMSSW_4_2_8/src/Validation/TrackVertex_2010/datasets/CMS_Run2010B_MinimumBias_AOD_Apr21ReReco-v1_0000_file_index.txt')
 process.source = cms.Source("PoolSource",fileNames = cms.untracked.vstring(*files2010data))
 
 # apply JSON file

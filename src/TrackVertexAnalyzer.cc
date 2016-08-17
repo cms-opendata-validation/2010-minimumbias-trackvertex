@@ -375,7 +375,7 @@ TrackVertex_2010::TrackVertex_2010(const edm::ParameterSet& iConfig) {
 }
 
 
-TrackVertex_2010::~TrackVertex2010() {
+TrackVertex_2010::~TrackVertex_2010() {
 	// do anything here that needs to be done at destruction time
 	// (e.g. close files, deallocate resources etc.)
 }
@@ -628,7 +628,7 @@ void TrackVertex_2010::analyze(const edm::Event& iEvent, const edm::EventSetup& 
 
         } // end of good lumi section
 
-} //TrackVertex::analyze ends
+} //TrackVertex_2010::analyze ends
 
 
 // ---- method called for each event to check good quality lumi section ---- //
