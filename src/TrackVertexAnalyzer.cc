@@ -1,9 +1,9 @@
 // -*- C++ -*-
 //
-// Package:    TrackVertex
-// Class:      TrackVertex
+// Package:    TrackVertex_2010
+// Class:      TrackVertex_2010
 // 
-/**\class TrackVertex TrackVertexAnalyzer.cc Validation/TrackVertex/src/TrackVertexAnalyzer.cc
+/**\class TrackVertex_2010 TrackVertexAnalyzer.cc Validation/TrackVertex_2010/src/TrackVertexAnalyzer.cc
 
  Description: [one line class summary]
 
@@ -69,10 +69,10 @@
 // class declaration
 //
 
-class TrackVertex: public edm::EDAnalyzer {
+class TrackVertex_2010: public edm::EDAnalyzer {
 public:
-	explicit TrackVertex(const edm::ParameterSet&);
-	~TrackVertex();
+	explicit TrackVertex_2010(const edm::ParameterSet&);
+	~TrackVertex_2010();
 
 	// declare variables
 	double deltaz;
@@ -198,7 +198,7 @@ private:
 // constructors and destructor
 //
 
-TrackVertex::TrackVertex(const edm::ParameterSet& iConfig) {
+TrackVertex_2010::TrackVertex_2010(const edm::ParameterSet& iConfig) {
 
 // *****************************************************************
 // This is the main analysis routine
@@ -375,7 +375,7 @@ TrackVertex::TrackVertex(const edm::ParameterSet& iConfig) {
 }
 
 
-TrackVertex::~TrackVertex() {
+TrackVertex_2010::~TrackVertex2010() {
 	// do anything here that needs to be done at destruction time
 	// (e.g. close files, deallocate resources etc.)
 }
@@ -387,7 +387,7 @@ TrackVertex::~TrackVertex() {
 //
 
 // ------------ method called for each event  ------------
-void TrackVertex::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup) {
+void TrackVertex_2010::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup) {
 
 // **********************************************
 // here each relevant event will get analyzed 
@@ -632,7 +632,7 @@ void TrackVertex::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
 
 
 // ---- method called for each event to check good quality lumi section ---- //
-bool TrackVertex::providesGoodLumisection(const edm::Event& iEvent) {
+bool TrackVertex_2010::providesGoodLumisection(const edm::Event& iEvent) {
 
 // check JSON "by hand"
 // This is a 'primitive' check which has the advantage that it also works 
@@ -950,14 +950,14 @@ bool TrackVertex::providesGoodLumisection(const edm::Event& iEvent) {
 
 
 // ------------ method called once each job just before starting event loop  ------------
-void TrackVertex::beginJob() {
+void TrackVertex_2010::beginJob() {
 
 }
 
 // ------------ method called once each job just after ending the event loop  ------------
-void TrackVertex::endJob() {
+void TrackVertex_2010::endJob() {
 }
 
 //define this as a plug-in
-DEFINE_FWK_MODULE(TrackVertex);
+DEFINE_FWK_MODULE(TrackVertex_2010);
 
