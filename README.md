@@ -22,7 +22,7 @@ cd CMSSW_4_2_8/src
 ```
 For cloning type:
 ```
-git clone https://github.com/cms-opendata-validation/2010-minimumbias-trackvertex Validation/TrackVertex_2010
+git clone git://github.com/cms-opendata-validation/2010-minimumbias-trackvertex Validation/TrackVertex_2010
 ```
 ## Setting up the CMS environment
 ```
